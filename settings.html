@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The site Blog In The World">
+	<meta name="keywords" content="sitename,with,ajax">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Settings</title>
+</head>
+<body>
+	<nav>
+		<a href="index.html" title="Home">
+			<div class="nav-btn">
+				<img src="statics/hm.png" alt="Home">
+			</div>
+		</a>
+		<a href="account.html" title="Account">
+			<div class="nav-btn">
+				<img src="statics/pn.png" alt="Account">
+			</div>
+		</a>
+		<a href="settings.html" title="Settings">
+			<div class="nav-btn">
+				<img src="statics/st.png" alt="Settings">
+			</div>
+		</a>
+		<a href="categories.html" title="Categories">
+			<div class="nav-btn">
+				<img src="statics/cg.png" alt="Categories">
+			</div>
+		</a>
+		<a href="about.html" title="About">
+			<div class="nav-btn">
+				<img src="statics/ab.png" alt="About">
+			</div>
+		</a>
+		<button class="nav-btn sch">
+			<img src="statics/sch.png" alt="Search" title="Search">
+		</button>
+		<form class="search-form">
+			<input class="search-input" type="text">
+			<input class="search-btn" type="submit" value="Search">
+		</form>
+	</nav>
+	<div class="settings">
+		<div class="icons-bar">
+			<button class="icon" data-section="security">
+				Security
+			</button>
+			<button class="icon" data-section="view">
+				View
+			</button>
+			<button class="icon" data-section="delete">
+				Delete
+			</button>
+		</div>
+		<div class="section" id="security">
+			<div class="section-item title">
+				Email: Email
+                <button class="chg" data-change="email">Change</button>
+                <div class="change-info" id="email">
+                    <form>
+                        <input type="email" maxlength="60" placeholder="New Email">
+                        <input type="submit" class="chg" value="Change">
+                    </form>
+                    <button class="cnl" data-change="email">Cancel</button>
+                </div>
+			</div>
+			<div class="section-item title">
+				Password: Password
+                <button class="chg" data-change="password">Change</button>
+                <div class="change-info" id="password">
+                    <form>
+                        <input type="password" maxlength="25" placeholder="New Password">
+                        <input type="submit" class="chg" value="Change">
+                    </form>
+                    <button class="cnl" data-change="password">Cancel</button>
+                </div>
+			</div>
+			<div class="section-item title">
+				Phone Number: number
+                <button class="chg" data-change="number">Change</button>
+                <div class="change-info" id="number">
+                    <form>
+                        <input type="text" maxlength="20" placeholder="New Phone Number">
+                        <input type="submit" class="chg" value="Change">
+                    </form>
+                    <button class="cnl" data-change="number">Cancel</button>
+                </div>
+			</div>
+		</div>
+		<div class="section" id="view">
+			<div class="section-item title">
+				background
+                <button class="chg" data-change="bg">Change</button>
+                <div class="change-info" id="bg">
+					Colors:
+					<div class="choices">
+						<div class="bg-choice blue" data-bg="00539f">Blue</div>
+						<div class="bg-choice green" data-bg="009f53">green</div>
+						<div class="bg-choice pink" data-bg="ff8888">pink</div>
+						<div class="bg-choice black" data-bg="212121">Black</div>
+						<div class="bg-choice l-grey" data-bg="888">Grey</div>
+					</div>
+					Images:
+					<div class="choices">
+						<img src="statics/bg.jpg" class="bg-choice-img" data-bg="statics/bg.jpg">
+						<img src="statics/bg2.jpg" class="bg-choice-img" data-bg="statics/bg2.jpg">
+						<img src="statics/bg3.jpg" class="bg-choice-img" data-bg="statics/bg3.jpg">
+					</div>
+                    <button class="cnl" data-change="bg">OK</button>
+                </div>
+			</div>
+			<div class="section-item title">
+				Fonts
+                <button class="chg" data-change="font">Change</button>
+                <div class="change-info" id="font">
+					Title Size:
+					<div class="choices">
+						<div class="ft-choice content" data-font="16">16px</div>
+						<div class="ft-choice content" data-font="18">18px</div>
+						<div class="ft-choice content" data-font="20">20px</div>
+						<div class="ft-choice content" data-font="25">25px</div>
+						<div class="ft-choice content" data-font="30">30px</div>
+					</div>
+					Content Size:
+					<div class="choices">
+						<div class="fc-choice content" data-font="16">16px</div>
+						<div class="fc-choice content" data-font="18">18px</div>
+						<div class="fc-choice content" data-font="20">20px</div>
+						<div class="fc-choice content" data-font="25">25px</div>
+						<div class="fc-choice content" data-font="30">30px</div>
+					</div>
+                    <button class="cnl" data-change="font">OK</button>
+                </div>
+			</div>
+		</div>
+		<div class="section" id="delete">
+			<div class="section-item title">
+				Posts
+                <button class="chg" data-change="dposts">Delete</button>
+                <div class="change-info" id="dposts">
+					<div class="choices">
+						This Choice Will Remove All Of Your Posts From Your Account.
+						<br>Are You Sure?
+						<form>
+							<input type="submit" class="y choice" value="Delete">
+							<div class="cnl n choice" data-change="dposts">Cancel</div>
+						</form>
+					</div>
+                </div>
+			</div>
+			<div class="section-item title">
+				Friends
+                <button class="chg" data-change="dfriends">Delete</button>
+                <div class="change-info" id="dfriends">
+					<div class="choices">
+						This Choice Will Remove All Of Your Friends From Your Account.
+						<br>Are You Sure?
+						<form>
+							<input type="submit" class="y choice" value="Delete">
+							<div class="cnl n choice" data-change="dfriends">Cancel</div>
+						</form>
+					</div>
+                </div>
+			</div>
+			<div class="section-item title">
+				Account
+                <button class="chg" data-change="daccount">Delete</button>
+                <div class="change-info" id="daccount">
+					<div class="choices">
+						This Choice Will Remove Your Account From The Website.
+						<br>Are You Sure?
+						<form>
+							<input type="submit" class="y choice" value="Delete">
+							<div class="cnl n choice" data-change="daccount">Cancel</div>
+						</form>
+					</div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<footer class="content">
+		<div class="follow">
+			<a href="https://t.me/muaazaltahan" target="_blank">
+				<img class="flw" src="statics/tel.png" alt="Telegram">
+			</a>
+			<a href="https://www.instagram.com/muaaz_al_tahan/" target="_blank">
+				<img class="flw" src="statics/ins.png" alt="Instagram">
+			</a>
+			<a href="https://www.facebook.com/DeveloperMuaaz/" target="_blank">
+				<img class="flw" src="statics/fb.png" alt="Facebook">
+			</a>
+		</div>
+		All Rights Reserved
+	</footer>
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

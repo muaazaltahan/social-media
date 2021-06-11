@@ -1,0 +1,398 @@
+/* Defaults */
+@font-face {
+    font-family: hemi-head-bd-it;
+    src: url('../statics/hemi-head-bd-it.ttf');
+}
+*{
+    font-family: hemi-head-bd-it;
+    box-sizing: border-box;
+}
+a{
+    color: #0ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover{color: #ff0;}
+body{
+    margin: 0;
+    padding: 50px 0;
+    background: #535353;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background 0.2s;
+}
+.info{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #fffa;
+    color: #055;
+    text-align: center;
+    border-radius: 10px;
+}
+form{display: inline-block;}
+button,input[type="submit"]{cursor: pointer;}
+
+/* For Changing Font Size */
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f25{font-size: 25px;}
+.f30{font-size: 30px;}
+
+/* Navigation */
+nav{
+    color: #fffa;
+    text-align: center;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav-btn{
+    cursor: pointer;
+    padding: 3px 2px;
+    float: left;
+}
+.nav-btn img{
+    width: 35px;
+    height: 35px;
+    transition: width 0.2s, height 0.2s;
+}
+.nav-btn:hover img{
+    width: 38px;
+    height: 38px;
+}
+
+/* Main Page 'index' */
+.sch{
+    background: none;
+    border: none;
+    padding: 3px 2px;
+}
+.search-form{display: none;}
+
+/* Posts In All Pages */
+.post{
+    background: #9998;
+    padding: 10px;
+    margin: 10px 0;
+    overflow: auto;
+}
+.p-title,.p-content{
+    width: 100%;
+    text-align: center;
+}
+.p-image img{width: 100%;}
+.p-author,.p-date{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+}
+.author-image{width: 60px;}
+.p-comments{
+    margin: 20px 5px;
+    padding: 10px;
+    width: 100%;
+    overflow: auto;
+}
+.comment{
+    margin: 20px 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 95%;
+    overflow: auto;
+}
+.c-date,.c-author{
+    float: left;
+    padding: 5px;
+}
+.c-content{padding-top: 60px;}
+.ac-submit{
+    padding: 5px;
+    background: #0b5;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    transition: background 0.2s;
+}
+.ac-submit:hover{background: #0c7;}
+
+/* Attribution */
+footer{
+    background: #0009;
+    color: #fff;
+    overflow: auto;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+}
+.follow{
+    position: absolute;
+    left: 0;
+}
+.flw{
+    width: 36px;
+    transition: width 0.2s, height 0.2s;
+}
+.flw:hover{width: 39px;}
+
+/* About Page */
+.about{
+    margin: 10px 10px;
+    padding: 40px 10px;
+    line-height: 1.5;
+    background: #9999;
+}
+header{
+    text-align: center;
+    padding-top: 45px;
+    background: #999b;
+}
+.logo{width: 200px;}
+
+/* Account Page. Other Account Page Have The Same Properties. Some Classes Are Shared With Settings Page */
+.account{
+    text-align: center;
+    background: #9998;
+    padding: 10px;
+    margin: 10px 10px;
+}
+.act-image{width: 100%;}
+.act-image img{
+    width: 200px;
+    max-height: 400px;
+}
+.row{
+    border: 2px solid #0007;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.chg,.cnl{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: inherit;
+    text-align: center;
+    padding: 0;
+    transition: background 0.2s, color 0.2s;
+}
+.chg:hover,.cnl:hover,.ft-choice:hover,.fc-choice:hover,.y:hover{
+    background: radial-gradient(#000f,#0005);
+    color: #fff;
+}
+.change-info{
+    display: none;
+    text-align: center;
+}
+.act-input[type="number"]{width: 80px;}
+.act-input{
+    width: 200px;
+    height: 30px;
+}
+textarea{
+    resize: none;
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Categories & Friends Page */
+.categories,.friends,.sug-friends{text-align: center;}
+.categories .row, .friend{background: #9998;}
+.friend{
+    display: block;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding: 5px 0;
+}
+.friend:hover{background: #5558;}
+.f-image img{
+    width: 155px;
+    height: 125px;
+}
+.f-name,.f-birthday,.f-desc{
+    padding: 5px;
+    color: #000;
+    word-break: keep-all;
+}
+.f-sw-r,.f-sw-g{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    transition: background 0.2s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.f-sw-r{background: #f23f00;}
+.f-sw-r:hover{background: #ff2525;}
+.f-sw-g{background: #003fff;}
+.f-sw-g:hover{background: #2525ff;}
+
+/* Settings Page. Icon & Section Classes Are Shared With Register Page */
+.settings{
+    margin: 65px 20px;
+    background: #9998;
+    overflow: auto;
+}
+.icons-bar,.section-item{text-align: center;}
+.icon{
+    cursor: pointer;
+    padding: 5px;
+    transition: background 0.2s, color 0.2s;
+    background: none;
+    border: 2px solid #0008;
+    border-radius: 10px;
+    margin: 0 2px;
+    color: #000;
+}
+.icon:hover,.hovered-icon{
+    background: #000a;
+    border: 2px solid #fff8;
+    color: #fff;
+}
+.section{display: none;}
+.choices{
+    margin: auto;
+    width: 200px;
+    overflow: auto;
+}
+.bg-choice,.bg-choice-img,.ft-choice,.fc-choice,.choice{
+    width: 70%;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #212121;
+    border-radius: 15px;
+}
+.ft-choice,.fc-choice{
+    height: auto;
+    width: auto;
+    padding: 3px;
+    float: left;
+    margin: 0 10px;
+}
+.choice{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    float: right;
+    margin: 0 10px;
+}
+.blue{background: #00539f;}
+.green{background: #009f53;}
+.pink{background: #ff8888;}
+.black{background: #212121;}
+.l-grey{background: #989898;}
+input.y{
+    background: #f23f00;
+    transition: background 0.2s;
+    height: 40px;
+    font-size: inherit;
+}
+.n{
+    background: #0b5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Register Page */
+.register{
+    text-align: center;
+    background: #8888;
+    padding: 20px 0;
+    margin: 60px 10px;
+}
+.rg-area{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+input.s-field{
+    width: 90%;
+    margin: 10px 5%;
+}
+.rg-area a{cursor: pointer;}
+#login,#signup{display: none;}
+.sh-signup,.sh-login{
+    margin: 10px;
+    padding: 10px;
+    background: #2525ff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.sh-signup:hover,.sh-login:hover{background: #3737ff;}
+
+/* For All Pages */
+.main,.settings,.about,.categories,.account,.friends,.sug-friends,.register{
+    box-shadow: 5px 5px 5px 2px #111;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Edit For Screens. The Edits Are Made When It's Important To Change The View Not With Specified Devices */
+@media screen and (min-width: 500px) {
+    input[type="text"],input[type="email"],input[type="password"]{
+        width: 240px;
+        height: 35px;
+    }
+    .choices{width: 300px;}
+    .friend{flex-direction: row;}
+}
+@media screen and (min-width: 700px) {
+    .main{
+        width: 90%;
+        margin: auto;
+    }
+    .p-image{
+        width: 260px;
+        max-height: 300px;
+        float: right;
+    }
+    .p-content{
+        float: right;
+        width: 280px;
+        height: 200px;
+        margin: 10px 3%;
+        overflow: auto;
+    }
+    .p-author{
+        float: left;
+        width: auto;
+    }
+    .p-date{
+        float: left;
+        width: auto;
+    }
+    input[type="text"],input[type="email"],input[type="password"]{
+        width: 280px;
+        height: 40px;
+    }
+    input.s-field{
+        width: 30%;
+        margin: 10px 5%;
+    }
+    .choices{width: 400px;}
+    .bg-choice,.bg-choice-img{
+        width: 100px;
+        float: left;
+    }
+}
